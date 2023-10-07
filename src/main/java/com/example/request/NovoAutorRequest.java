@@ -1,6 +1,7 @@
 package com.example.request;
 
 import com.example.model.Autor;
+import com.example.validator.UniqueValue;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -16,6 +17,7 @@ public class NovoAutorRequest {
     private String nome;
     @NotBlank
     @Email
+    @UniqueValue(domainClass = Autor.class, fieldName = "email")
     private String email;
     @NotBlank
     @Size(max = 400)
