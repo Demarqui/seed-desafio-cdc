@@ -34,7 +34,7 @@ public class NovoLivroRequest {
     private BigDecimal preco;
     @NotNull
     @Min(value = 100)
-    private int numPaginas;
+    private Integer numPaginas;
     @NotNull
     @UniqueValue(domainClass = Livro.class, fieldName = "isbn")
     private String isbn;
