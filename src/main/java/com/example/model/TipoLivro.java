@@ -8,6 +8,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 
 @Entity
 @Table(name = "tb_tipo_livro")
@@ -29,4 +32,17 @@ public class TipoLivro {
     @ManyToOne
     @JoinColumn(name = "livro_id")
     private Livro livro;
+
+    public TipoLivro(Livro livro) {
+        this.livro = livro;
+    }
+
+    public Function<Livro, List<TipoLivro>> toModel(){
+        List<TipoLivro> tipoLivros = new ArrayList<>();
+        return liv -> {
+            TipoLivro tipoLivro = new TipoLivro(liv);
+            tipoLivros.add(tipoLivro);
+            return tipoLivros;
+        };
+    }
 }
