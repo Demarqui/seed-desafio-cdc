@@ -1,6 +1,7 @@
 package com.example.model;
 
 import com.example.enums.TipoLivroEnum;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
@@ -8,9 +9,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Function;
 
 @Entity
 @Table(name = "tb_tipo_livro")
@@ -30,19 +28,7 @@ public class TipoLivro {
     private BigDecimal preco;
 
     @ManyToOne
-    @JoinColumn(name = "livro_id")
+    @JoinColumn(name = "livro_id", referencedColumnName = "id")
+    @JsonIgnore
     private Livro livro;
-
-    public TipoLivro(Livro livro) {
-        this.livro = livro;
-    }
-
-    public Function<Livro, List<TipoLivro>> toModel(){
-        List<TipoLivro> tipoLivros = new ArrayList<>();
-        return liv -> {
-            TipoLivro tipoLivro = new TipoLivro(liv);
-            tipoLivros.add(tipoLivro);
-            return tipoLivros;
-        };
-    }
 }

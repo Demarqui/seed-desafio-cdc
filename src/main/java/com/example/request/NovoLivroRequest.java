@@ -80,13 +80,22 @@ public class NovoLivroRequest {
         Assert.state(autor!=null, "O autor informado não existe");
         Assert.state(categoria!=null, "A categoria informada não existe");
 
-        Livro livro = new Livro(titulo, resumo, sumario, preco, numPaginas, isbn, dataLancamento,
-                categoria, autor, tipoLivro, sobreAtualizacoes, conteudo, sumarios, redesSociais, sugestoes);
+        NovaSugestaoRequest novaSugestao = new NovaSugestaoRequest();
+        Function<Livro, List<Sugestoes>> funcaoCriadoraSugestoes = novaSugestao.toModel(sugestoes);
 
-        sumarios.forEach(sumario -> sumario.setLivro(livro));
-        redesSociais.forEach(redeSocial -> redeSocial.setLivro(livro));
-        sugestoes.forEach(sugestao -> sugestao.setLivro(livro));
-        tipoLivro.forEach(tipoLivro -> tipoLivro.setLivro(livro));
+        NovoTipoLivroRequest novoTipoLivroRequest = new NovoTipoLivroRequest();
+        Function<Livro, List<TipoLivro>> funcaoCriadoraTiposLivro = novoTipoLivroRequest.toModel(tipoLivro);
+
+        NovoSumarioRequest novoSumarioRequest = new NovoSumarioRequest();
+        Function<Livro, List<Sumario>> funcaoCriadoraSumario = novoSumarioRequest.toModel(sumarios);
+
+        NovaRedeSocialRequest novaRedeSocialRequest = new NovaRedeSocialRequest();
+        Function<Livro, List<RedesSociais>> funcaoCriadoraRedeSocial = novaRedeSocialRequest.toModel(redesSociais);
+
+        Livro livro = new Livro(titulo, resumo, sumario, preco, numPaginas, isbn, dataLancamento,
+                categoria, autor, sobreAtualizacoes, conteudo, funcaoCriadoraSugestoes,
+                funcaoCriadoraTiposLivro, funcaoCriadoraSumario, funcaoCriadoraRedeSocial);
+
         entityManager.persist(livro);
         return livro;
     }

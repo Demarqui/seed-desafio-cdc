@@ -4,6 +4,7 @@ com\example\controller\AutorController.class
 com\example\request\NovaCategoriaRequest.class
 com\example\controller\DetalheLivrosController.class
 com\example\response\DetalhesLivroResponse.class
+com\example\request\NovoSumarioRequest.class
 com\example\controller\LivroController.class
 com\example\model\Sumario.class
 com\example\validator\UniqueValueValidator.class
@@ -16,9 +17,12 @@ com\example\exception\ValidationErrorsOutputDto.class
 com\example\model\RedesSociais.class
 com\example\response\DetalhesLivroResponse$DetalhesLivroResponseBuilder.class
 com\example\model\TipoLivro.class
+com\example\request\NovoTipoLivroRequest.class
 com\example\request\NovoAutorRequest.class
 com\example\validator\ExistsByIdValidator.class
 com\example\repository\AutorRepository.class
+com\example\request\NovaSugestaoRequest.class
+com\example\request\NovaRedeSocialRequest.class
 com\example\validator\ExistsById.class
 com\example\exception\ValidationErrorHandler.class
 com\example\model\Livro.class

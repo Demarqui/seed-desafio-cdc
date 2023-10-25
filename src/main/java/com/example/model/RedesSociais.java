@@ -1,6 +1,7 @@
 package com.example.model;
 
 import com.example.enums.RedesSociaisEnum;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,7 @@ public class RedesSociais {
     private RedesSociaisEnum redeSocial;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "livro_id")
+    @JoinColumn(name = "livro_id", referencedColumnName = "id")
+    @JsonIgnore
     private Livro livro;
 }

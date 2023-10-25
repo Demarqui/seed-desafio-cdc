@@ -1,3 +1,4 @@
+C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\request\NovaRedeSocialRequest.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\model\Categoria.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\response\DetalhesLivroResponse.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\exception\ValidationErrorsOutputDto.java
@@ -21,8 +22,11 @@ C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-c
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\model\Sugestoes.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\model\TipoLivro.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\model\Livro.java
+C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\request\NovoTipoLivroRequest.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\controller\DetalheLivrosController.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\exception\FieldErrorOutputDto.java
+C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\request\NovaSugestaoRequest.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\repository\CategoriaRepository.java
+C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\request\NovoSumarioRequest.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\controller\CategoriaController.java
 C:\Users\Admin\Desktop\Jornada Dev Eficiente\Primeiro desafio-cdc\seed-desafio-cdc\src\main\java\com\example\validator\UniqueValueValidator.java

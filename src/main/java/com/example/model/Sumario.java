@@ -1,5 +1,6 @@
 package com.example.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,7 +19,8 @@ public class Sumario {
     private Long id;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "livro_id")
+    @JoinColumn(name = "livro_id", referencedColumnName = "id")
+    @JsonIgnore
     private Livro livro;
 
     private String descricao;

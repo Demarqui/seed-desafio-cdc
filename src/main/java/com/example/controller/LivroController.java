@@ -6,6 +6,7 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +22,8 @@ public class LivroController {
     @Transactional
     public ResponseEntity<?> criaNovoLivro(@RequestBody @Valid NovoLivroRequest request){//2
         var livro = request.toModel(entityManager); //3
-        return ResponseEntity.ok(livro);
+        entityManager.persist(livro);
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 
 }
